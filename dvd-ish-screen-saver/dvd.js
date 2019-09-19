@@ -27,13 +27,12 @@ class Dvd {
         this.width = this.side_size;
         this.height = this.side_size;
 
-        this.speed = Math.max(5, Math.floor(this.side_size * 0.01));
+        this.speed = Math.max(4, Math.floor(this.side_size * 0.01));
         this.xspeed = this.speed;
         this.yspeed = this.speed;
     }
 
     draw() {
-        this
         this.check_collision_and_bounce();
 
         image(this.img, this.x, this.y, this.width, this.height)
@@ -49,7 +48,6 @@ class Dvd {
         else {
             this.img_index  += 1;
         }
-        console.log(this.img_index)
     }
 
     check_collision_and_bounce() {
